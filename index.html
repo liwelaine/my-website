@@ -13,26 +13,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-  /* ============ TOKENS ============ */
+  /* ============ TOKENS (Light · editorial paper) ============ */
   :root {
-    --bg: #0E0F14;
-    --bg-elev: #161823;
-    --bg-card: #1A1D2B;
-    --ink: #ECEDF2;
-    --ink-dim: #9CA0B5;
-    --ink-mute: #5A5E73;
-    --line: rgba(255,255,255,0.08);
-    --line-strong: rgba(255,255,255,0.16);
+    --bg: #F7F5EF;
+    --bg-elev: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --ink: #14151B;
+    --ink-dim: #5A5E73;
+    --ink-mute: #9CA0B5;
+    --line: rgba(20,21,27,0.09);
+    --line-strong: rgba(20,21,27,0.16);
 
-    --violet: #A78BFA;
-    --violet-deep: #7C5DF0;
-    --violet-soft: #C4B5FD;
-    --mint: #7CF0BD;
-    --mint-soft: #B6F7DA;
-    --amber: #FFB855;
+    --violet: #6E4DEB;
+    --violet-deep: #4F2FD1;
+    --violet-soft: #A78BFA;
+    --mint: #0EA571;
+    --mint-soft: #C8F3DE;
+    --amber: #D9881C;
 
-    --shadow-glow: 0 0 60px rgba(167, 139, 250, 0.25);
-    --shadow-card: 0 30px 80px -20px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 60px rgba(110, 77, 235, 0.18);
+    --shadow-card: 0 20px 60px -15px rgba(20,21,27,0.12);
 
     --display: 'Fraunces', Georgia, serif;
     --body: 'Inter Tight', system-ui, sans-serif;
@@ -65,8 +65,8 @@
     position: fixed; inset: 0;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.35;
-    mix-blend-mode: overlay;
+    opacity: 0.10;
+    mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
   }
 
@@ -145,13 +145,13 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(22, 24, 35, 0.7);
+    background: rgba(255, 255, 255, 0.72);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid var(--line);
     border-radius: 100px;
     padding: 6px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 40px rgba(20,21,27,0.08);
   }
   .nav-brand {
     font-family: var(--display);
@@ -277,12 +277,12 @@
     width: 6px; height: 6px;
     background: var(--mint);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(124, 240, 189, 0.2);
+    box-shadow: 0 0 0 4px rgba(14, 165, 113, 0.18);
     animation: pulse 2s ease-in-out infinite;
   }
   @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 4px rgba(124, 240, 189, 0.2); }
-    50% { box-shadow: 0 0 0 8px rgba(124, 240, 189, 0.05); }
+    0%, 100% { box-shadow: 0 0 0 4px rgba(14, 165, 113, 0.18); }
+    50% { box-shadow: 0 0 0 8px rgba(14, 165, 113, 0.04); }
   }
 
   .hero h1 {
@@ -348,9 +348,9 @@
     color: var(--bg);
   }
   .btn-primary:hover {
-    background: var(--violet-soft);
+    background: var(--violet-deep);
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px rgba(167, 139, 250, 0.4);
+    box-shadow: 0 14px 30px rgba(110, 77, 235, 0.28);
   }
   .btn-ghost {
     background: transparent;
@@ -478,7 +478,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 100%, rgba(167, 139, 250, 0.08), transparent 60%);
+    background: radial-gradient(circle at 50% 100%, rgba(110, 77, 235, 0.10), transparent 60%);
     opacity: 0;
     transition: opacity 0.5s;
   }
@@ -679,7 +679,7 @@
   .work-card-tags span {
     font-size: 11px;
     padding: 6px 12px;
-    background: rgba(255,255,255,0.04);
+    background: rgba(20,21,27,0.04);
     border: 1px solid var(--line);
     border-radius: 100px;
     color: var(--ink-dim);
@@ -780,7 +780,7 @@
   }
   .matrix-instruction::before {
     content: ''; width: 6px; height: 6px; background: var(--mint); border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(124, 240, 189, 0.2);
+    box-shadow: 0 0 0 4px rgba(14, 165, 113, 0.18);
     animation: pulse 2s infinite;
   }
 
@@ -837,7 +837,7 @@
     width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 16px 40px rgba(20,21,27,0.10);
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
   .deck-showcase:hover img, .summit-showcase:hover img {
@@ -961,7 +961,7 @@
     right: 6%;
     border: 1.5px dashed var(--mint);
     border-radius: 12px;
-    background: rgba(124, 240, 189, 0.06);
+    background: rgba(14, 165, 113, 0.08);
     pointer-events: none;
   }
   .matrix-target-lbl {
@@ -996,7 +996,7 @@
     border-color: var(--violet);
     z-index: 10;
     transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.3);
+    box-shadow: 0 8px 24px rgba(110, 77, 235, 0.22);
   }
   .brand-dot.dragging {
     z-index: 100;
@@ -1012,7 +1012,7 @@
     background: var(--mint);
     color: var(--bg);
     border-color: var(--mint);
-    box-shadow: 0 8px 24px rgba(124, 240, 189, 0.4);
+    box-shadow: 0 8px 24px rgba(14, 165, 113, 0.28);
   }
 
   .matrix-strategy {
@@ -1096,7 +1096,7 @@
   .bp-tag {
     display: inline-block;
     padding: 4px 10px;
-    background: rgba(124, 240, 189, 0.1);
+    background: rgba(14, 165, 113, 0.10);
     color: var(--mint);
     font-size: 10px;
     font-family: var(--mono);
@@ -1171,7 +1171,7 @@
   .ai-strip {
     margin-top: 16px;
     padding: 16px 24px;
-    background: linear-gradient(90deg, rgba(167, 139, 250, 0.08), rgba(124, 240, 189, 0.08));
+    background: linear-gradient(90deg, rgba(110, 77, 235, 0.08), rgba(14, 165, 113, 0.08));
     border: 1px solid var(--line);
     border-radius: 16px;
     display: flex;
@@ -1351,7 +1351,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 32px 40px;
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(124, 240, 189, 0.05));
+    background: linear-gradient(135deg, rgba(110, 77, 235, 0.08), rgba(14, 165, 113, 0.06));
     border: 1px solid var(--line);
     border-radius: 20px;
   }
