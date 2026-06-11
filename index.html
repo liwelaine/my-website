@@ -7,6 +7,11 @@
 <meta name="description" content="Senior PMM portfolio. 8 years driving B2B GTM across AI startups, enterprise hardware, and developer-facing products. NYC." />
 <meta property="og:title" content="Elaine Lee — PMM Portfolio 2026" />
 <meta property="og:description" content="GTM at startup speed and enterprise scale. Chainsight (YC) · ASUS · NYU." />
+<meta property="og:type" content="website" />
+<!-- Social preview thumbnail. Drop og-image.png (1200×630) beside this file. -->
+<meta property="og:image" content="og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="og-image.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,9 +184,25 @@
     background: var(--violet);
     color: var(--bg);
   }
+  .nav-resume {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mint);
+    border: 1px solid var(--line-strong);
+    border-radius: 100px;
+    transition: all 0.25s;
+    letter-spacing: 0.01em;
+    margin-left: 6px;
+  }
+  .nav-resume:hover {
+    border-color: var(--mint);
+    background: var(--bg-card);
+  }
   @media (max-width: 720px) {
     .nav-brand { display: none; }
     .nav-link { padding: 8px 12px; font-size: 12px; }
+    .nav-resume { padding: 8px 12px; font-size: 12px; margin-left: 2px; }
   }
 
   /* ============ LAYOUT ============ */
@@ -362,6 +383,111 @@
     border-color: var(--mint);
     color: var(--mint);
   }
+  /* ============ PROOF BAND ============ */
+  .proof-band {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding: 22px 28px;
+    margin: 24px 0 8px;
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    background: var(--bg-card);
+  }
+  .proof-lead {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mint);
+  }
+  .proof-stat {
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .proof-num {
+    font-weight: 700;
+    color: var(--violet);
+  }
+  .proof-tail {
+    color: var(--ink-dim);
+  }
+  @media (max-width: 720px) {
+    .proof-band { padding: 18px 20px; }
+    .proof-stat { font-size: 16px; }
+  }
+  /* ============ FEATURED CASE STUDY ============ */
+  .feature-case {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 0;
+    margin: 0 0 64px;
+    border: 1px solid var(--line-strong);
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--bg-card);
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+    color: var(--ink);
+  }
+  .feature-case:hover {
+    border-color: var(--violet);
+    box-shadow: 0 20px 50px rgba(110, 77, 235, 0.16);
+    transform: translateY(-3px);
+  }
+  .feature-case-main { padding: 36px 38px; }
+  .feature-case-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 26px;
+    font-weight: 600;
+    color: var(--violet);
+  }
+  .feature-case:hover .feature-case-cta .arrow { transform: translateX(5px); }
+  .feature-case-proof {
+    padding: 36px 32px;
+    background: var(--bg-elev);
+    border-left: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .fc-stat { }
+  .fc-co {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .fc-num {
+    font-family: var(--display);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.05;
+    color: var(--mint);
+    margin: 4px 0 2px;
+    letter-spacing: -0.02em;
+  }
+  .fc-lbl { font-size: 13px; color: var(--ink-dim); }
+  .fc-foot {
+    font-size: 12px;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    line-height: 1.5;
+  }
+  @media (max-width: 820px) {
+    .feature-case { grid-template-columns: 1fr; }
+    .feature-case-proof { border-left: none; border-top: 1px solid var(--line); flex-direction: row; flex-wrap: wrap; }
+    .fc-stat { flex: 1 1 40%; }
+    .fc-foot { flex: 1 1 100%; }
+  }
+  @media (max-width: 560px) {
+    .feature-case-main { padding: 28px 24px; }
+  }
   .btn .arrow {
     transition: transform 0.3s;
   }
@@ -400,49 +526,12 @@
     opacity: 0.3;
     animation: rotateSlow 30s linear infinite;
   }
-  .hero-art-ring::before {
-    content: ''; position: absolute;
-    width: 18px; height: 18px;
-    background: var(--mint);
-    border-radius: 50%;
-    top: -9px; left: 50%;
-    transform: translateX(-50%);
-  }
   @keyframes rotateSlow {
     to { transform: rotate(360deg); }
   }
 
-  .hero-art-tag {
-    position: absolute;
-    background: var(--bg-elev);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 12px 16px;
-    font-size: 12px;
-    box-shadow: var(--shadow-card);
-    backdrop-filter: blur(10px);
-  }
-  .hero-art-tag .num {
-    font-family: var(--display);
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--mint);
-    letter-spacing: -0.02em;
-  }
-  .hero-art-tag .lbl {
-    color: var(--ink-mute);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
-  .hero-art-tag.t1 { top: 8%; left: -8%; animation: floatY 4s ease-in-out infinite alternate-reverse; }
-  .hero-art-tag.t2 { bottom: 12%; right: -6%; animation: floatY 5s ease-in-out 0.5s infinite alternate; }
-  .hero-art-tag.t3 { top: 50%; left: -14%; animation: floatY 4.5s ease-in-out 1s infinite alternate; }
   @media (max-width: 900px) {
     .hero-art { max-width: 360px; margin: 0 auto; }
-    .hero-art-tag.t1 { left: 0; }
-    .hero-art-tag.t3 { left: -4%; }
   }
 
   /* ============ SECTIONS ============ */
@@ -1298,6 +1387,146 @@
   .contact-hero h1 { margin-bottom: 24px; }
   .contact-hero .body-l { max-width: 640px; margin: 0 auto; }
 
+  /* ============ SKILLS GRID ============ */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin: 60px 0;
+  }
+  @media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr; } }
+
+  .skill-item {
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-card);
+  }
+  .skill-item:hover {
+    border-color: var(--mint);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px -15px rgba(14, 165, 113, 0.25);
+  }
+  .skill-item-soon { opacity: 0.65; }
+  .skill-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .skill-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .skill-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+  .skill-desc {
+    color: var(--ink-dim);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .skill-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(14, 165, 113, 0.08);
+    border: 1px solid rgba(14, 165, 113, 0.22);
+    border-radius: 100px;
+    font-size: 12px;
+    color: var(--mint);
+    font-weight: 600;
+  }
+  .skill-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--mint);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s;
+    text-decoration: none;
+  }
+  .skill-link:hover { gap: 12px; }
+  .skill-link[disabled] { color: var(--ink-mute); cursor: default; }
+  .skill-link .arrow {
+    display: inline-block;
+    transition: transform 0.25s;
+  }
+  .skill-item:hover .skill-link .arrow { transform: translateX(2px); }
+  .skill-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .skill-link-ghost {
+    color: var(--ink-dim);
+    font-weight: 500;
+  }
+  .skill-link-ghost:hover { color: var(--ink); gap: 8px; }
+
+  /* ============ PRINCIPLE FLOW ============ */
+  .principle-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  @media (max-width: 760px) {
+    .principle-flow { grid-template-columns: 1fr; }
+    .principle-flow .pf-arrow { display: none; }
+  }
+  .pf-step {
+    display: flex;
+    gap: 14px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+  }
+  .pf-num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--mint);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pf-step h5 {
+    font-family: var(--body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .pf-step p { font-size: 13px; color: var(--ink-dim); line-height: 1.5; margin: 0; }
+  .pf-arrow {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-mute);
+    font-size: 22px;
+  }
+
   .contact-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1401,6 +1630,12 @@
     transform: translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
+  /* Safety: if the observer never fires (fast scroll, JS disabled,
+     reduced motion), content must never stay invisible. */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
   .reveal.in {
     opacity: 1;
     transform: translateY(0);
@@ -1444,8 +1679,10 @@
   <a href="#/" class="nav-brand">Elaine Lee.</a>
   <a href="#/" class="nav-link" data-route="/">Home</a>
   <a href="#/work" class="nav-link" data-route="/work">Work</a>
+  <a href="#/ai-workflow" class="nav-link" data-route="/ai-workflow">AI Workflow</a>
   <a href="#/about" class="nav-link" data-route="/about">About</a>
   <a href="#/contact" class="nav-link" data-route="/contact">Contact</a>
+  <a href="Elaine_Lee_Resume.pdf" class="nav-resume" download>Résumé ↓</a>
 </nav>
 
 <main id="app"></main>
@@ -1484,6 +1721,7 @@ const routes = {
   '/work': workIndexPage,
   '/work/chainsight': chainsightPage,
   '/work/asus': asusPage,
+  '/ai-workflow': aiWorkflowPage,
   '/about': aboutPage,
   '/contact': contactPage,
 };
@@ -1542,6 +1780,9 @@ function homePage() {
               <a href="#/work" class="btn btn-primary">
                 See the work <span class="arrow">→</span>
               </a>
+              <a href="Elaine_Lee_Resume.pdf" class="btn btn-ghost" download>
+                Download résumé ↓
+              </a>
               <a href="#/contact" class="btn btn-ghost">
                 Let's talk
               </a>
@@ -1554,18 +1795,15 @@ function homePage() {
             <div class="hero-art-frame">
               <img src="${IMG.HERO_PORTRAIT}" alt="Elaine Lee" class="hero-art-img" />
             </div>
-            <div class="hero-art-tag t1">
-              <div class="num">12K</div>
-              <div class="lbl">Sign-ups · YC</div>
-            </div>
-            <div class="hero-art-tag t2">
-              <div class="num">3K+</div>
-              <div class="lbl">Enterprise leads</div>
-            </div>
-            <div class="hero-art-tag t3">
-              <div class="num">14</div>
-              <div class="lbl">Country teams</div>
-            </div>
+          </div>
+        </section>
+
+        <!-- FLAGSHIP PROOF BAND -->
+        <section class="proof-band">
+          <div class="proof-lead">Most recent:</div>
+          <div class="proof-stat">
+            <span class="proof-num">12,400</span> sign-ups in <span class="proof-num">3 weeks</span>
+            <span class="proof-tail">— Chainsight (YC S22), developer-facing AI launch I led end-to-end.</span>
           </div>
         </section>
 
@@ -2335,6 +2573,158 @@ function chainsightPage() {
 }
 
 /* ============================================================
+   AI WORKFLOW PAGE
+   ============================================================ */
+function aiWorkflowPage() {
+  return `
+    <div class="page">
+      <div class="container">
+        <div style="margin-bottom: 60px;" class="reveal">
+          <div class="label label-mint" style="margin-bottom: 16px;">/ AI Workflow</div>
+          <h1 class="display-l">PMM judgment, turned into systems.</h1>
+          <p class="body-l" style="margin-top:20px; max-width: 720px;">A series of AI-powered workflows where the judgment drives the automation — not the other way around. Each one works two ways: as a Claude skill and as a runnable program. Open source on GitHub.</p>
+        </div>
+
+        <!-- FEATURED CASE STUDY -->
+        <a href="portfolio-case-study-2.html" target="_blank" rel="noopener" class="feature-case reveal">
+          <div class="feature-case-main">
+            <div class="label label-mint" style="margin-bottom:14px;">Featured case study</div>
+            <h2 class="display-m">An AI system that writes, sends, and improves marketing content — on its own.</h2>
+            <p class="body-l" style="margin-top:16px;">One topic in. It drafts a blog, writes a tailored newsletter for each persona, sends through the CRM, tracks what performs, and uses the results to decide what to publish next — a loop that gets sharper every round. The PMM sets the segmentation; the engine executes it at scale.</p>
+            <div class="skill-tags" style="margin-top:20px;">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Claude</span>
+              <span class="skill-tag">HubSpot</span>
+              <span class="skill-tag">Zero API keys</span>
+            </div>
+            <span class="feature-case-cta">Read the full case study <span class="arrow">→</span></span>
+          </div>
+          <div class="feature-case-proof">
+            <div class="fc-stat">
+              <div class="fc-co">Zip · enterprise procurement</div>
+              <div class="fc-num">16.4%</div>
+              <div class="fc-lbl">top-segment click rate — Finance Leader</div>
+            </div>
+            <div class="fc-stat">
+              <div class="fc-co">Shopify · SMB commerce</div>
+              <div class="fc-num">20.4%</div>
+              <div class="fc-lbl">top-segment click rate — Growing DTC Brand</div>
+            </div>
+            <div class="fc-foot">Same engine, two markets. Swap one company-profile file → different audiences, content, and segmentation logic.</div>
+          </div>
+        </a>
+
+        <!-- THE PROBLEM -->
+        <section class="section reveal">
+          <div class="section-header">
+            <div class="label label-violet">The problem</div>
+            <h2 class="display-m">Most marketing "automation" automates the wrong thing.</h2>
+            <p class="body-l" style="margin-top:16px;">Tools are great at <em>sending</em>. But the hard part of marketing isn't sending — it's knowing who to say what to. That judgment usually lives in someone's head, and the loop quietly breaks in three places.</p>
+          </div>
+          <div class="diff-grid reveal-stagger">
+            <div class="diff">
+              <div class="diff-num">01</div>
+              <h4>Segmentation lives in someone's head</h4>
+              <p>A CFO and a first-time founder care about different things, but tailoring per audience is slow — so teams default to one generic blast.</p>
+            </div>
+            <div class="diff">
+              <div class="diff-num">02</div>
+              <h4>The steps don't talk</h4>
+              <p>Ideate, write, send, and measure are disconnected. Whoever picks next week's topic rarely knows what actually performed last week.</p>
+            </div>
+            <div class="diff">
+              <div class="diff-num">03</div>
+              <h4>Results don't feed back</h4>
+              <p>Data gets reported and forgotten. Every week starts from scratch instead of getting smarter.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- THE FRAMEWORK -->
+        <section class="section reveal">
+          <div class="section-header">
+            <div class="label label-mint">The framework</div>
+            <h2 class="display-m">The judgment drives the automation — <span class="italic underline-mint">not the other way around</span>.</h2>
+            <p class="body-l" style="margin-top:16px;">Instead of automating the easy part, these workflows encode the hard part — judgment — and put a human checkpoint exactly where it matters. The same principle holds across every workflow; only the use case changes.</p>
+          </div>
+          <div class="principle-flow reveal-stagger">
+            <div class="pf-step">
+              <span class="pf-num">1</span>
+              <div><h5>AI proposes</h5><p>Drafts the audience model, personas, and content.</p></div>
+            </div>
+            <div class="pf-arrow">→</div>
+            <div class="pf-step">
+              <span class="pf-num">2</span>
+              <div><h5>The PMM confirms</h5><p>Human judgment approves who to target and what to say.</p></div>
+            </div>
+            <div class="pf-arrow">→</div>
+            <div class="pf-step">
+              <span class="pf-num">3</span>
+              <div><h5>The system executes</h5><p>Generates, sends, measures, and feeds the results back in.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- THE FRAMEWORK, APPLIED -->
+        <div class="section-header reveal" style="margin-bottom: 32px;">
+          <div class="label label-violet">The framework, applied</div>
+          <h2 class="display-m">Live workflows.</h2>
+        </div>
+
+        <div class="skills-grid reveal-stagger">
+          <div class="skill-item">
+            <div class="skill-header">
+              <div class="skill-icon">🔄</div>
+              <h3>AI-Powered Content Pipeline</h3>
+            </div>
+            <p class="skill-desc">Turns one topic into a blog and a newsletter tailored to each buyer persona — then sends, measures, and decides what to publish next. The twist: AI proposes the personas, the PMM confirms them, then the system executes. Judgment drives the automation. Demonstrated on Zip & Shopify.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Claude</span>
+              <span class="skill-tag">HubSpot</span>
+              <span class="skill-tag">Zero API keys</span>
+            </div>
+            <div class="skill-links">
+              <a href="portfolio-case-study-2.html" target="_blank" rel="noopener" class="skill-link">
+                View case study <span class="arrow">→</span>
+              </a>
+              <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Add more skills here -->
+          <div class="skill-item skill-item-soon">
+            <div class="skill-header">
+              <div class="skill-icon">✨</div>
+              <h3>More workflows coming</h3>
+            </div>
+            <p class="skill-desc">New workflows are added to the repo only once they run end-to-end and produce real output. More on the way.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">In progress</span>
+            </div>
+            <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost">
+              Follow on GitHub ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="section reveal" style="text-align:center; padding: 80px 0;">
+          <div class="label label-mint">Building AI workflows</div>
+          <h2 class="display-m" style="margin: 24px 0 32px;">Want to collaborate on <span class="italic underline-mint">automation</span>?</h2>
+          <div class="cta-row" style="justify-content:center;">
+            <a href="#/contact" class="btn btn-primary">Let's chat <span class="arrow">→</span></a>
+            <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="btn btn-ghost">GitHub repo</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  `;
+}
+
+/* ============================================================
    ABOUT PAGE
    ============================================================ */
 function aboutPage() {
@@ -2666,12 +3056,12 @@ function initCursor() {
 
   // Hover detect via event delegation
   document.addEventListener('mouseover', (e) => {
-    if (e.target.closest('a, button, .work-card, .brand-dot, .nav-link, .contact-card, .vertical-card, .bp-card')) {
+    if (e.target.closest('a, button, .work-card, .brand-dot, .nav-link, .contact-card, .vertical-card, .bp-card, .skill-item')) {
       ring.classList.add('hover');
     }
   });
   document.addEventListener('mouseout', (e) => {
-    if (e.target.closest('a, button, .work-card, .brand-dot, .nav-link, .contact-card, .vertical-card, .bp-card')) {
+    if (e.target.closest('a, button, .work-card, .brand-dot, .nav-link, .contact-card, .vertical-card, .bp-card, .skill-item')) {
       ring.classList.remove('hover');
     }
   });
