@@ -3,15 +3,57 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elaine Lee — Senior Product Marketing Manager · Portfolio 2026</title>
-<meta name="description" content="Senior PMM portfolio. 8 years driving B2B GTM across AI startups, enterprise hardware, and developer-facing products. NYC." />
-<meta property="og:title" content="Elaine Lee — PMM Portfolio 2026" />
-<meta property="og:description" content="GTM at startup speed and enterprise scale. Chainsight (YC) · ASUS · NYU." />
+<title>Elaine Lee — Senior Product Marketing Manager · AI-Native PMM Portfolio</title>
+<meta name="description" content="Senior Product Marketing Manager with 8 years driving B2B GTM across AI startups, enterprise hardware, and developer products. AI-native PMM building go-to-market workflows as systems. Based in NYC." />
+<meta name="author" content="Elaine Lee (I-Wen Lee)" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#6E4DEB" />
+<link rel="canonical" href="https://leeiwen.org/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%236E4DEB'/><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23F7F5EF'>E</text></svg>" />
+
+<!-- Open Graph -->
 <meta property="og:type" content="website" />
-<!-- Social preview thumbnail. Drop og-image.png (1200×630) beside this file. -->
-<meta property="og:image" content="og-image.png" />
+<meta property="og:site_name" content="Elaine Lee — PMM Portfolio" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://leeiwen.org/" />
+<meta property="og:title" content="Elaine Lee — Senior Product Marketing Manager" />
+<meta property="og:description" content="AI-native PMM. 8 years of B2B GTM across AI startups, enterprise hardware, and developer products. Chainsight (YC) · ASUS · NYU." />
+<meta property="og:image" content="https://leeiwen.org/og-image.png" />
+<meta property="og:image:secure_url" content="https://leeiwen.org/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Elaine Lee — Senior Product Marketing Manager portfolio" />
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="og-image.png" />
+<meta name="twitter:title" content="Elaine Lee — Senior Product Marketing Manager" />
+<meta name="twitter:description" content="AI-native PMM. 8 years of B2B GTM across AI startups, enterprise hardware, and developer products." />
+<meta name="twitter:image" content="https://leeiwen.org/og-image.png" />
+<meta name="twitter:image:alt" content="Elaine Lee — Senior PMM portfolio" />
+
+<!-- Structured data · Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Elaine Lee",
+  "alternateName": "I-Wen Lee",
+  "url": "https://leeiwen.org/",
+  "image": "https://leeiwen.org/og-image.png",
+  "jobTitle": "Senior Product Marketing Manager",
+  "description": "AI-native B2B Product Marketing Manager with 8 years across AI startups, enterprise hardware, and developer products.",
+  "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "New York University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Southampton" },
+    { "@type": "CollegeOrUniversity", "name": "National Chung Hsing University" }
+  ],
+  "knowsAbout": ["Product Marketing", "Go-to-Market Strategy", "B2B SaaS", "AI Workflows", "Positioning", "Content Strategy", "Demand Generation"],
+  "knowsLanguage": ["English", "Chinese"],
+  "sameAs": ["https://github.com/liwelaine"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1482,7 +1524,223 @@
   }
   .skill-link-ghost:hover { color: var(--ink); gap: 8px; }
 
-  /* ============ PRINCIPLE FLOW ============ */
+  
+
+  /* ============ AI WORKFLOW PAGE REFINEMENT ============ */
+  .workflow-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+  @media (max-width: 900px) { .workflow-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .workflow-preview-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--line-strong);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+  }
+  .workflow-preview-panel::before {
+    content: '';
+    position: absolute;
+    inset: -80px -60px auto auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(110,77,235,.16), transparent 65%);
+  }
+  .mini-flow {
+    position: relative;
+    display: grid;
+    gap: 12px;
+  }
+  .mini-step {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(255,255,255,.72);
+  }
+  .mini-step .n {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--violet);
+    color: #fff;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .mini-step:nth-child(even) .n { background: var(--mint); }
+  .mini-step h4 { font-size: 15px; margin-bottom: 3px; }
+  .mini-step p { font-size: 13px; color: var(--ink-dim); margin: 0; line-height: 1.45; }
+  .workflow-loop-note {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, rgba(110,77,235,.08), rgba(14,165,113,.08));
+    color: var(--ink-dim);
+    font-size: 13px;
+  }
+  .workflow-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 980px) { .workflow-pillars { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .workflow-pillars { grid-template-columns: 1fr; } }
+  .workflow-card {
+    padding: 26px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    min-height: 210px;
+  }
+  .workflow-card .step-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--violet);
+    margin-bottom: 18px;
+  }
+  .workflow-card h3 { font-size: 22px; margin-bottom: 10px; }
+  .workflow-card p { color: var(--ink-dim); font-size: 14px; line-height: 1.6; }
+  .workflow-wide-card {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 28px;
+    align-items: start;
+    padding: 34px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+  }
+  @media (max-width: 800px) { .workflow-wide-card { grid-template-columns: 1fr; } }
+  .workflow-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .workflow-meta-item {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--bg);
+  }
+  .workflow-meta-item .k {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6px;
+  }
+  .workflow-meta-item .v { font-size: 14px; color: var(--ink); font-weight: 600; }
+
+  /* ============ AI WORKFLOW · REFINEMENT v2 ============ */
+  /* Closed-loop cue on the hero glance */
+  .wf-loop-tag {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin-top: 14px; padding: 7px 12px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, rgba(110,77,235,.10), rgba(14,165,113,.10));
+    border: 1px solid var(--line);
+    font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--ink-dim);
+  }
+  .wf-loop-tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 3px rgba(14,165,113,.15); }
+
+  /* Dark spotlight band — the differentiator */
+  .wf-band-dark {
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 32px;
+    padding: clamp(36px, 5.5vw, 68px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+  .wf-band-dark::before {
+    content: '';
+    position: absolute; inset: -120px -100px auto auto;
+    width: 360px; height: 360px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(110,77,235,.30), transparent 65%);
+    pointer-events: none;
+  }
+  .wf-band-dark::after {
+    content: '';
+    position: absolute; inset: auto auto -140px -90px;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(14,165,113,.22), transparent 65%);
+    pointer-events: none;
+  }
+  .wf-band-dark > * { position: relative; z-index: 1; }
+  .wf-band-dark .label { color: var(--mint-soft); }
+  .wf-band-dark h2 { color: var(--bg); }
+  .wf-band-dark .body-l { color: rgba(247,245,239,.74); }
+  .wf-roles {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px;
+  }
+  @media (max-width: 760px) { .wf-roles { grid-template-columns: 1fr; } }
+  .wf-role {
+    padding: 24px;
+    border: 1px solid rgba(247,245,239,.14);
+    border-radius: 18px;
+    background: rgba(247,245,239,.045);
+  }
+  .wf-role .who {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .10em; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .wf-role.ai .who { color: var(--violet-soft); }
+  .wf-role.pmm .who { color: var(--mint-soft); }
+  .wf-role.sys .who { color: var(--amber); }
+  .wf-role.pmm { border-color: rgba(200,243,222,.30); background: rgba(14,165,113,.08); }
+  .wf-role h4 { font-size: 18px; margin-bottom: 8px; color: var(--bg); }
+  .wf-role p { font-size: 14px; line-height: 1.55; color: rgba(247,245,239,.70); }
+
+  /* Division-of-labor split */
+  .wf-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+  @media (max-width: 760px) { .wf-split { grid-template-columns: 1fr; } }
+  .wf-col {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+  }
+  .wf-col.owned { border-color: rgba(14,165,113,.40); }
+  .wf-col-head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--line);
+  }
+  .wf-col-head h4 { font-size: 17px; }
+  .wf-col-head .tag {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .10em; text-transform: uppercase;
+    padding: 4px 9px; border-radius: 100px;
+  }
+  .wf-col.auto .tag { color: var(--violet); background: rgba(110,77,235,.10); }
+  .wf-col.owned .tag { color: var(--mint); background: rgba(14,165,113,.10); }
+  .wf-list { list-style: none; display: grid; gap: 13px; }
+  .wf-list li { display: grid; grid-template-columns: 18px 1fr; gap: 11px; font-size: 14px; color: var(--ink-dim); line-height: 1.5; align-items: start; }
+  .wf-list li .ic { font-weight: 700; line-height: 1.4; }
+  .wf-col.auto .wf-list li .ic { color: var(--violet); }
+  .wf-col.owned .wf-list li .ic { color: var(--mint); }
+  .wf-col.owned .wf-list li { color: var(--ink); }
+
+/* ============ PRINCIPLE FLOW ============ */
   .principle-flow {
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -1726,9 +1984,39 @@ const routes = {
   '/contact': contactPage,
 };
 
+/* ---- Per-route SEO ---- */
+const SITE_URL = 'https://leeiwen.org/';
+const routeSEO = {
+  '/':              { t: 'Elaine Lee — Senior Product Marketing Manager · AI-Native PMM Portfolio', d: 'Senior Product Marketing Manager with 8 years driving B2B GTM across AI startups, enterprise hardware, and developer products. AI-native PMM building go-to-market workflows as systems. Based in NYC.' },
+  '/work':          { t: 'Work — Elaine Lee · Senior PMM', d: 'Selected go-to-market work: Chainsight (YC-backed AI), ASUS Business across EMEA & APAC, and a portfolio of AI-native PMM workflows.' },
+  '/work/chainsight': { t: 'Chainsight (YC) — GTM Case Study · Elaine Lee', d: 'Go-to-market and launch work for a YC-backed AI startup: positioning, content, and early growth motion.' },
+  '/work/asus':     { t: 'ASUS Business — GTM Case Study · Elaine Lee', d: 'Repositioned ASUS Business and led commercial launches across 14 markets in EMEA and APAC, building the B2B content engine.' },
+  '/ai-workflow':   { t: 'AI PMM Workflows — Elaine Lee', d: 'AI-native PMM workflows built as systems: segmentation, messaging, distribution, and measurement as one closed loop. Featuring the AI Content Pipeline.' },
+  '/about':         { t: 'About — Elaine Lee · Senior PMM', d: 'A B2B product marketer with range across AI, enterprise hardware, and e-commerce. Completing an M.S. at NYU on the CS + MBA track.' },
+  '/contact':       { t: 'Contact — Elaine Lee · Senior PMM', d: 'Get in touch with Elaine Lee, Senior Product Marketing Manager based in New York.' },
+};
+
+function setMeta(selector, attr, value) {
+  const el = document.head.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
+
+function applyRouteSEO(hash) {
+  const seo = routeSEO[hash] || routeSEO['/'];
+  const url = hash === '/' ? SITE_URL : SITE_URL + '#' + hash;
+  document.title = seo.t;
+  setMeta('meta[name="description"]', 'content', seo.d);
+  setMeta('meta[property="og:title"]', 'content', seo.t);
+  setMeta('meta[property="og:description"]', 'content', seo.d);
+  setMeta('meta[property="og:url"]', 'content', url);
+  setMeta('meta[name="twitter:title"]', 'content', seo.t);
+  setMeta('meta[name="twitter:description"]', 'content', seo.d);
+}
+
 function navigate() {
   const hash = window.location.hash.slice(1) || '/';
   const route = routes[hash] || homePage;
+  applyRouteSEO(hash);
   const app = document.getElementById('app');
   app.innerHTML = route();
   // Update nav active state
@@ -2579,146 +2867,266 @@ function aiWorkflowPage() {
   return `
     <div class="page">
       <div class="container">
-        <div style="margin-bottom: 60px;" class="reveal">
-          <div class="label label-mint" style="margin-bottom: 16px;">/ AI Workflow</div>
-          <h1 class="display-l">PMM judgment, turned into systems.</h1>
-          <p class="body-l" style="margin-top:20px; max-width: 720px;">A series of AI-powered workflows where the judgment drives the automation — not the other way around. Each one works two ways: as a Claude skill and as a runnable program. Open source on GitHub.</p>
-        </div>
 
-        <!-- FEATURED CASE STUDY -->
+        <!-- HERO · OVERVIEW + WORKFLOW AT A GLANCE -->
+        <section class="workflow-hero-grid reveal">
+          <div>
+            <div class="label label-mint" style="margin-bottom: 16px;">/ AI PMM Workflows</div>
+            <h1 class="display-l">AI-native PMM, built as systems.</h1>
+            <p class="body-l" style="margin-top:20px; max-width: 660px;">Most marketers use AI to write faster. I use it to build the system that decides <span class="underline-mint">what to write, who it's for, and what to do with the results</span> — segmentation, messaging, distribution, and measurement as one closed loop.</p>
+            <div class="cta-row" style="margin-top: 32px;">
+              <a href="portfolio-case-study-2.html" target="_blank" rel="noopener" class="btn btn-primary">View case study <span class="arrow">→</span></a>
+              <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="btn btn-ghost">GitHub repo ↗</a>
+            </div>
+          </div>
+
+          <div class="workflow-preview-panel">
+            <div class="label label-violet" style="margin-bottom: 14px;">The loop, at a glance</div>
+            <div class="mini-flow">
+              <div class="mini-step">
+                <span class="n">1</span>
+                <div><h4>Company profile</h4><p>ICP, product use cases, and the GTM goal go in.</p></div>
+              </div>
+              <div class="mini-step">
+                <span class="n">2</span>
+                <div><h4>Personas</h4><p>Audience segments derived from the profile.</p></div>
+              </div>
+              <div class="mini-step">
+                <span class="n">3</span>
+                <div><h4>Content</h4><p>Message angles, blog, and newsletter variants per segment.</p></div>
+              </div>
+              <div class="mini-step">
+                <span class="n">4</span>
+                <div><h4>CRM distribution</h4><p>Simulated campaign sends and logged CRM actions.</p></div>
+              </div>
+              <div class="mini-step">
+                <span class="n">5</span>
+                <div><h4>Analytics</h4><p>Opens, clicks, and segment-level engagement.</p></div>
+              </div>
+              <div class="mini-step">
+                <span class="n">6</span>
+                <div><h4>Recommendations</h4><p>The next round's topics, angles, and headline tests.</p></div>
+              </div>
+            </div>
+            <span class="wf-loop-tag"><span class="dot"></span> Step 6 feeds Step 1 — the loop closes</span>
+          </div>
+        </section>
+
+        <!-- DIFFERENTIATOR · CONTROL POINT (dark band) -->
+        <section class="section reveal">
+          <div class="wf-band-dark">
+            <div class="label label-mint" style="margin-bottom:14px;">The control point</div>
+            <h2 class="display-m">AI proposes. I decide. The system executes.</h2>
+            <p class="body-l" style="margin-top:16px; max-width: 720px;">The value isn't the generation — it's the judgment around it. Every workflow is built so a PMM owns the market logic before anything ships. That boundary is the whole point.</p>
+            <div class="wf-roles">
+              <div class="wf-role ai">
+                <div class="who">AI proposes</div>
+                <h4>Speed &amp; coverage</h4>
+                <p>Drafts personas, message angles, and content variants in minutes — the volume a human can't match.</p>
+              </div>
+              <div class="wf-role pmm">
+                <div class="who">PMM decides</div>
+                <h4>Market judgment</h4>
+                <p>Who actually matters, what they care about, and which message is true and on-brand. The human checkpoint.</p>
+              </div>
+              <div class="wf-role sys">
+                <div class="who">System executes</div>
+                <h4>Distribution &amp; proof</h4>
+                <p>Runs the campaign, logs the actions, measures engagement, and surfaces what to do next.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED WORKFLOW: AI CONTENT PIPELINE -->
         <a href="portfolio-case-study-2.html" target="_blank" rel="noopener" class="feature-case reveal">
           <div class="feature-case-main">
-            <div class="label label-mint" style="margin-bottom:14px;">Featured case study</div>
-            <h2 class="display-m">An AI system that writes, sends, and improves marketing content — on its own.</h2>
-            <p class="body-l" style="margin-top:16px;">One topic in. It drafts a blog, writes a tailored newsletter for each persona, sends through the CRM, tracks what performs, and uses the results to decide what to publish next — a loop that gets sharper every round. The PMM sets the segmentation; the engine executes it at scale.</p>
+            <div class="label label-mint" style="margin-bottom:14px;">Featured workflow · live</div>
+            <h2 class="display-m">AI Content Pipeline.</h2>
+            <p class="body-l" style="margin-top:16px;">One company profile in. It generates personas, writes content for each audience, simulates CRM distribution, measures engagement, and recommends what to publish next — running end to end with real output locally. Same engine, different segmentation logic per company.</p>
             <div class="skill-tags" style="margin-top:20px;">
               <span class="skill-tag">Python</span>
               <span class="skill-tag">Claude</span>
-              <span class="skill-tag">HubSpot</span>
-              <span class="skill-tag">Zero API keys</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">HubSpot-style CRM</span>
             </div>
             <span class="feature-case-cta">Read the full case study <span class="arrow">→</span></span>
           </div>
           <div class="feature-case-proof">
             <div class="fc-stat">
-              <div class="fc-co">Zip · enterprise procurement</div>
-              <div class="fc-num">16.4%</div>
-              <div class="fc-lbl">top-segment click rate — Finance Leader</div>
+              <div class="fc-co">Input</div>
+              <div class="fc-num">1 profile</div>
+              <div class="fc-lbl">company, ICP, and GTM goal</div>
             </div>
             <div class="fc-stat">
-              <div class="fc-co">Shopify · SMB commerce</div>
-              <div class="fc-num">20.4%</div>
-              <div class="fc-lbl">top-segment click rate — Growing DTC Brand</div>
+              <div class="fc-co">Output</div>
+              <div class="fc-num">full loop</div>
+              <div class="fc-lbl">personas → content → campaign → analytics → next steps</div>
             </div>
-            <div class="fc-foot">Same engine, two markets. Swap one company-profile file → different audiences, content, and segmentation logic.</div>
+            <div class="fc-foot">The PMM sets the segmentation logic; the workflow scales execution and the feedback loop.</div>
           </div>
         </a>
 
-        <!-- THE PROBLEM -->
+        <!-- DIVISION OF LABOR · WHAT AI DOES vs WHAT I OWN -->
         <section class="section reveal">
           <div class="section-header">
-            <div class="label label-violet">The problem</div>
-            <h2 class="display-m">Most marketing "automation" automates the wrong thing.</h2>
-            <p class="body-l" style="margin-top:16px;">Tools are great at <em>sending</em>. But the hard part of marketing isn't sending — it's knowing who to say what to. That judgment usually lives in someone's head, and the loop quietly breaks in three places.</p>
+            <div class="label label-violet">Where the work splits</div>
+            <h2 class="display-m">What AI does — and what I own.</h2>
+            <p class="body-l" style="margin-top:16px;">The honest division of labor inside every workflow. AI removes the grind; the marketing decisions stay human.</p>
           </div>
-          <div class="diff-grid reveal-stagger">
-            <div class="diff">
-              <div class="diff-num">01</div>
-              <h4>Segmentation lives in someone's head</h4>
-              <p>A CFO and a first-time founder care about different things, but tailoring per audience is slow — so teams default to one generic blast.</p>
+          <div class="wf-split">
+            <div class="wf-col auto">
+              <div class="wf-col-head">
+                <h4>Automated by the system</h4>
+                <span class="tag">AI</span>
+              </div>
+              <ul class="wf-list">
+                <li><span class="ic" aria-hidden="true">→</span><span>Drafting persona profiles from a company brief</span></li>
+                <li><span class="ic" aria-hidden="true">→</span><span>Producing blog and newsletter variants per segment</span></li>
+                <li><span class="ic" aria-hidden="true">→</span><span>Simulating campaign sends and CRM actions</span></li>
+                <li><span class="ic" aria-hidden="true">→</span><span>Tallying opens, clicks, and engagement by audience</span></li>
+                <li><span class="ic" aria-hidden="true">→</span><span>Generating candidate topics and headline tests</span></li>
+              </ul>
             </div>
-            <div class="diff">
-              <div class="diff-num">02</div>
-              <h4>The steps don't talk</h4>
-              <p>Ideate, write, send, and measure are disconnected. Whoever picks next week's topic rarely knows what actually performed last week.</p>
-            </div>
-            <div class="diff">
-              <div class="diff-num">03</div>
-              <h4>Results don't feed back</h4>
-              <p>Data gets reported and forgotten. Every week starts from scratch instead of getting smarter.</p>
+            <div class="wf-col owned">
+              <div class="wf-col-head">
+                <h4>Owned by the PMM</h4>
+                <span class="tag">Me</span>
+              </div>
+              <ul class="wf-list">
+                <li><span class="ic" aria-hidden="true">✓</span><span>Defining who the real buyers and users are</span></li>
+                <li><span class="ic" aria-hidden="true">✓</span><span>Setting the positioning and message hierarchy</span></li>
+                <li><span class="ic" aria-hidden="true">✓</span><span>Approving what is true, on-brand, and worth shipping</span></li>
+                <li><span class="ic" aria-hidden="true">✓</span><span>Reading the analytics for the <em>so-what</em>, not just the numbers</span></li>
+                <li><span class="ic" aria-hidden="true">✓</span><span>Deciding what the next cycle actually optimizes for</span></li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <!-- THE FRAMEWORK -->
+        <!-- WHAT THIS DEMONSTRATES · 7 CAPABILITIES -->
         <section class="section reveal">
           <div class="section-header">
-            <div class="label label-mint">The framework</div>
-            <h2 class="display-m">The judgment drives the automation — <span class="italic underline-mint">not the other way around</span>.</h2>
-            <p class="body-l" style="margin-top:16px;">Instead of automating the easy part, these workflows encode the hard part — judgment — and put a human checkpoint exactly where it matters. The same principle holds across every workflow; only the use case changes.</p>
+            <div class="label label-mint">What this demonstrates</div>
+            <h2 class="display-m">The PMM skill set, made visible.</h2>
           </div>
-          <div class="principle-flow reveal-stagger">
-            <div class="pf-step">
-              <span class="pf-num">1</span>
-              <div><h5>AI proposes</h5><p>Drafts the audience model, personas, and content.</p></div>
+          <div class="workflow-pillars reveal-stagger">
+            <div class="workflow-card"><div class="step-label">01</div><h3>Audience segmentation</h3><p>Turning a market into the personas that actually drive the buy.</p></div>
+            <div class="workflow-card"><div class="step-label">02</div><h3>Messaging &amp; positioning</h3><p>Saying the right thing to the right segment, by design.</p></div>
+            <div class="workflow-card"><div class="step-label">03</div><h3>Content strategy</h3><p>Mapping angles and formats to the buyer's journey.</p></div>
+            <div class="workflow-card"><div class="step-label">04</div><h3>CRM-style execution</h3><p>Campaign sends and logged actions modeled end to end.</p></div>
+            <div class="workflow-card"><div class="step-label">05</div><h3>Performance analysis</h3><p>Reading engagement by segment to find what works.</p></div>
+            <div class="workflow-card"><div class="step-label">06</div><h3>AI workflow design</h3><p>Orchestrating model steps into a reliable pipeline.</p></div>
+            <div class="workflow-card"><div class="step-label">07</div><h3>GTM system thinking</h3><p>Connecting message, motion, and metric into one loop.</p></div>
+          </div>
+        </section>
+
+        <!-- TWO WAYS TO USE -->
+        <section class="section reveal">
+          <div class="section-header">
+            <div class="label label-violet">Two ways to use it</div>
+            <h2 class="display-m">Run it, or hand it to Claude.</h2>
+            <p class="body-l" style="margin-top:16px;">The same workflow ships as a runnable program and as a Claude skill — and runs without any API key in mock mode.</p>
+          </div>
+          <div class="skills-grid reveal-stagger">
+            <div class="skill-item">
+              <div class="skill-header">
+                <h3>Runnable program</h3>
+              </div>
+              <p class="skill-desc">Clone, install, and run end to end. Produces real personas, content, campaign simulation, analytics, and recommendations locally — plus a Flask dashboard to view results.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">SQLite</span>
+              </div>
+              <div class="skill-links">
+                <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link" aria-label="Run the AI Content Pipeline locally — GitHub">Run locally <span class="arrow">→</span></a>
+              </div>
             </div>
-            <div class="pf-arrow">→</div>
-            <div class="pf-step">
-              <span class="pf-num">2</span>
-              <div><h5>The PMM confirms</h5><p>Human judgment approves who to target and what to say.</p></div>
-            </div>
-            <div class="pf-arrow">→</div>
-            <div class="pf-step">
-              <span class="pf-num">3</span>
-              <div><h5>The system executes</h5><p>Generates, sends, measures, and feeds the results back in.</p></div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <h3>Claude skill</h3>
+              </div>
+              <p class="skill-desc">Packaged as a Claude skill so the whole pipeline can be invoked conversationally — drop in a company profile and get the full GTM content loop back.</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Claude</span>
+                <span class="skill-tag">Mock or live</span>
+              </div>
+              <div class="skill-links">
+                <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost" aria-label="Read the Claude skill docs on GitHub">See the docs ↗</a>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- THE FRAMEWORK, APPLIED -->
-        <div class="section-header reveal" style="margin-bottom: 32px;">
-          <div class="label label-violet">The framework, applied</div>
-          <h2 class="display-m">Live workflows.</h2>
-        </div>
+        <!-- COMPANY PROFILES & SEGMENTATION -->
+        <section class="section reveal">
+          <div class="section-header">
+            <div class="label label-mint">Company profiles</div>
+            <h2 class="display-m">Same engine, different segmentation logic.</h2>
+            <p class="body-l" style="margin-top:16px;">Each profile changes who the personas are and how the message is framed — proof the logic is PMM-driven, not template-driven.</p>
+          </div>
+          <div class="workflow-pillars reveal-stagger" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+            <div class="workflow-card"><div class="step-label">Zip · enterprise procurement</div><h3>Role-based</h3><p>Segments for procurement, finance, and requesters across the approval chain.</p></div>
+            <div class="workflow-card"><div class="step-label">Shopify · SMB commerce</div><h3>Stage-based</h3><p>Segments for founders, DTC brands, and growing retailers by maturity.</p></div>
+            <div class="workflow-card"><div class="step-label">Datadog · dev &amp; ops</div><h3>Practitioner-based</h3><p>Segments for engineers, SREs, and platform leads by what they monitor.</p></div>
+          </div>
+        </section>
 
-        <div class="skills-grid reveal-stagger">
-          <div class="skill-item">
-            <div class="skill-header">
-              <div class="skill-icon">🔄</div>
-              <h3>AI-Powered Content Pipeline</h3>
+        <!-- FUTURE WORKFLOW IDEAS -->
+        <section class="section reveal">
+          <div class="section-header">
+            <div class="label label-violet">On the roadmap</div>
+            <h2 class="display-m">What comes next.</h2>
+            <p class="body-l" style="margin-top:16px;">New workflows ship only when they can prove the same closed-loop structure — generate, distribute, measure, improve.</p>
+          </div>
+          <div class="skills-grid reveal-stagger">
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>Competitive positioning</h3></div>
+              <p class="skill-desc">Map a category, place competitors on a matrix, and generate differentiated positioning by segment.</p>
+              <div class="skill-tags"><span class="skill-tag">Planned</span></div>
             </div>
-            <p class="skill-desc">Turns one topic into a blog and a newsletter tailored to each buyer persona — then sends, measures, and decides what to publish next. The twist: AI proposes the personas, the PMM confirms them, then the system executes. Judgment drives the automation. Demonstrated on Zip & Shopify.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Claude</span>
-              <span class="skill-tag">HubSpot</span>
-              <span class="skill-tag">Zero API keys</span>
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>ICP research</h3></div>
+              <p class="skill-desc">Synthesize firmographic and behavioral signals into a sharp, defensible ideal-customer profile.</p>
+              <div class="skill-tags"><span class="skill-tag">Planned</span></div>
             </div>
-            <div class="skill-links">
-              <a href="portfolio-case-study-2.html" target="_blank" rel="noopener" class="skill-link">
-                View case study <span class="arrow">→</span>
-              </a>
-              <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost">
-                GitHub ↗
-              </a>
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>Sales enablement briefs</h3></div>
+              <p class="skill-desc">Turn positioning into battlecards, objection handling, and talk tracks the field will actually use.</p>
+              <div class="skill-tags"><span class="skill-tag">Planned</span></div>
+            </div>
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>Interview synthesis</h3></div>
+              <p class="skill-desc">Cluster customer-interview transcripts into themes, jobs-to-be-done, and message tests.</p>
+              <div class="skill-tags"><span class="skill-tag">Planned</span></div>
+            </div>
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>Launch messaging</h3></div>
+              <p class="skill-desc">A repeatable tier-based launch framework, from narrative down to channel-ready copy.</p>
+              <div class="skill-tags"><span class="skill-tag">Planned</span></div>
+            </div>
+            <div class="skill-item skill-item-soon">
+              <div class="skill-header"><h3>More on GitHub</h3></div>
+              <p class="skill-desc">The roadmap lives in the repo. Follow along as each workflow ships.</p>
+              <div class="skill-tags"><span class="skill-tag">In progress</span></div>
+              <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost" aria-label="Follow the AI PMM Workflows roadmap on GitHub">Follow on GitHub ↗</a>
             </div>
           </div>
+        </section>
 
-          <!-- Add more skills here -->
-          <div class="skill-item skill-item-soon">
-            <div class="skill-header">
-              <div class="skill-icon">✨</div>
-              <h3>More workflows coming</h3>
-            </div>
-            <p class="skill-desc">New workflows are added to the repo only once they run end-to-end and produce real output. More on the way.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">In progress</span>
-            </div>
-            <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="skill-link skill-link-ghost">
-              Follow on GitHub ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- CTA Section -->
+        <!-- CTA -->
         <section class="section reveal" style="text-align:center; padding: 80px 0;">
           <div class="label label-mint">Building AI workflows</div>
-          <h2 class="display-m" style="margin: 24px 0 32px;">Want to collaborate on <span class="italic underline-mint">automation</span>?</h2>
+          <h2 class="display-m" style="margin: 24px 0 32px;">Want a PMM who ships the <span class="italic underline-mint">system</span>, not just the slide?</h2>
           <div class="cta-row" style="justify-content:center;">
             <a href="#/contact" class="btn btn-primary">Let's chat <span class="arrow">→</span></a>
-            <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="btn btn-ghost">GitHub repo</a>
+            <a href="https://github.com/liwelaine/ai-pmm-workflows" target="_blank" rel="noopener" class="btn btn-ghost">GitHub repo ↗</a>
           </div>
         </section>
+
       </div>
     </div>
   `;
@@ -2867,14 +3275,14 @@ function contactPage() {
 
         <div class="contact-cards reveal-stagger">
           <a href="mailto:el4427@nyu.edu" class="contact-card">
-            <div class="contact-card-icon">✉</div>
+            <div class="contact-card-icon">@</div>
             <div class="contact-card-content">
               <div class="lbl">Email</div>
               <div class="v">el4427@nyu.edu</div>
             </div>
           </a>
           <a href="tel:+14257664695" class="contact-card">
-            <div class="contact-card-icon">☎</div>
+            <div class="contact-card-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5 9 4l1 3.6L8 9.1a12 12 0 0 0 6.9 6.9l1.5-2 3.6 1 .5 2.5a2 2 0 0 1-2 2.4C11 23 4 16 3.1 6.1a2 2 0 0 1 2.4-2z"/></svg></div>
             <div class="contact-card-content">
               <div class="lbl">Phone</div>
               <div class="v">+1 425-766-4695</div>
