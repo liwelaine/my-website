@@ -2135,6 +2135,45 @@
   .mega-mo:hover { color: var(--violet); }
   .mega-mo:hover .ar { color: var(--violet); transform: translateX(3px); }
 
+  /* ASUS Gartner case: compact editorial cards and normalized funnel */
+  .dg-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+  .dg-card { display:flex; flex-direction:column; min-width:0; background:var(--bg-elev); border:1px solid var(--line-strong); border-radius:15px; overflow:hidden; transition:transform .2s var(--ease),box-shadow .2s; }
+  .dg-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-card); }
+  .dg-card img { width:100%; height:185px; object-fit:cover; background:#EDF1F4; }
+  .dg-card-body { padding:20px 21px 22px; display:flex; flex-direction:column; gap:9px; flex:1; }
+  .dg-card-kicker { font-size:11px; font-weight:650; letter-spacing:.08em; text-transform:uppercase; color:var(--violet); }
+  .dg-card h3 { font-size:19px; line-height:1.25; letter-spacing:-.025em; }
+  .dg-card p { font-size:13px; color:var(--ink-dim); line-height:1.55; }
+  .dg-card-cta { margin-top:auto; padding-top:8px; font-weight:650; font-size:12px; color:var(--mint); }
+  .dg-note { font-size:12px; color:var(--ink-dim); line-height:1.65; margin-top:16px; max-width:900px; }
+  .dg-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+  .dg-step { padding:24px; background:var(--bg-elev); border:1px solid var(--line); border-top:3px solid var(--violet); border-radius:0 0 12px 12px; }
+  .dg-step:nth-child(2) { border-top-color:var(--violet-soft); }
+  .dg-step:nth-child(3) { border-top-color:var(--mint); }
+  .dg-step-num { font-size:11px; color:var(--violet); font-weight:700; letter-spacing:.07em; }
+  .dg-step h3 { margin:9px 0 7px; font-size:18px; }
+  .dg-step p { font-size:13px; color:var(--ink-dim); }
+  .dg-results { display:grid; grid-template-columns:1.25fr .75fr; gap:20px; }
+  .dg-funnel, .dg-kpi { border:1px solid var(--line-strong); background:var(--bg-elev); border-radius:14px; padding:24px; }
+  .dg-funnel-head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:22px; }
+  .dg-funnel-head strong { font-size:15px; }
+  .dg-pill { font-size:10px; color:#086647; background:#E9F6F0; padding:6px 9px; border-radius:6px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }
+  .dg-funnel-row { margin-bottom:19px; }
+  .dg-funnel-label { display:flex; justify-content:space-between; align-items:baseline; gap:10px; font-size:13px; margin-bottom:8px; }
+  .dg-funnel-label strong { font-size:22px; }
+  .dg-track { background:#EDEAF6; height:20px; border-radius:5px; overflow:hidden; }
+  .dg-fill { background:var(--violet); height:100%; border-radius:5px; }
+  .dg-fill.qual { width:64%; background:var(--mint); }
+  .dg-handoff { padding:12px 14px; border:1px dashed rgba(14,165,113,.4); border-radius:8px; color:var(--ink-dim); font-size:12px; background:#F1FAF6; }
+  .dg-kpis { display:grid; gap:14px; grid-template-columns:1fr; }
+  .dg-kpi { display:flex; flex-direction:column; justify-content:center; background:var(--violet-wash); }
+  .dg-kpi:nth-child(2) { background:#EFF8F3; }
+  .dg-kpi-number { font-size:clamp(38px,4.5vw,56px); font-weight:750; letter-spacing:-.06em; line-height:1.1; color:var(--violet); }
+  .dg-kpi:nth-child(2) .dg-kpi-number { color:var(--mint); }
+  .dg-kpi-label { font-size:12px; color:var(--ink-dim); margin-top:9px; }
+  @media(max-width:900px) { .dg-cards,.dg-steps { grid-template-columns:repeat(2,minmax(0,1fr)); } .dg-results { grid-template-columns:1fr; } .dg-kpis { grid-template-columns:1fr 1fr; } }
+  @media(max-width:610px) { .dg-cards,.dg-steps,.dg-kpis { grid-template-columns:1fr; } .dg-card img { height:190px; } .dg-kpi { min-height:140px; } }
+
 </style>
 <style>
   /* ---- embedded interactive prototype (scoped .pp) ---- */
@@ -2374,7 +2413,7 @@ const routeSEO = {
   '/work':          { t: 'Work — Elaine Lee · Senior PMM', d: 'Selected go-to-market work: Chainsight (YC-backed AI), ASUS Business across EMEA & APAC, and a portfolio of AI-native PMM workflows.' },
   '/work/chainsight': { t: 'Chainsight (YC) — GTM Case Study · Elaine Lee', d: 'Go-to-market and launch work for a YC-backed AI startup: positioning, content, and early growth motion.' },
   '/work/asus':     { t: 'ASUS Business — GTM Case Study · Elaine Lee', d: 'Repositioned ASUS Business and led commercial launches across 14 markets in EMEA and APAC, building the B2B content engine.' },
-  '/work/demand-gen': { t: 'ASUS × Gartner Demand Gen Program — Case Study · Elaine Lee', d: 'A 4-wave analyst-content demand-gen engine: localized landing pages, syndication, paid and owned media, and a Pardot-to-Salesforce qualification funnel across 27 countries.' },
+  '/work/demand-gen': { t: 'ASUS × Gartner Demand Gen — Case Study · Elaine Lee', d: 'Turning analyst research into buyer-specific campaigns, multi-market distribution, and an anonymized lead-qualification funnel.' },
   '/ai-workflow':   { t: 'AI PMM Workflows — Elaine Lee', d: 'AI-native PMM workflows built as systems: segmentation, messaging, distribution, and measurement as one closed loop. Featuring the AI Content Pipeline.' },
   '/about':         { t: 'About — Elaine Lee · Senior PMM', d: 'A B2B product marketer with range across AI, enterprise hardware, and e-commerce. Completing an M.S. at NYU on the CS + MBA track.' },
   '/contact':       { t: 'Contact — Elaine Lee · Senior PMM', d: 'Get in touch with Elaine Lee, Senior Product Marketing Manager based in New York.' },
@@ -2574,13 +2613,13 @@ function homePage() {
                   <span class="sep">·</span>
                   <span class="label">ASUS × Gartner · Demand gen</span>
                 </div>
-                <h3 style="margin-top: 10px;">A 4-wave analyst-content demand engine across 27 countries.</h3>
-                <p class="work-card-desc">19 localized landing pages · syndication + SEM + programmatic · Pardot → Salesforce qualification. Flagship wave: 20.5M impressions.</p>
+                <h3 style="margin-top: 10px;">From Gartner research to qualified enterprise demand.</h3>
+                <p class="work-card-desc">Buyer-focused messaging · regional landing pages · paid and syndicated distribution · Pardot → Salesforce qualification.</p>
               </div>
               <div class="work-card-foot" style="margin-top: 0; flex: 0 0 auto;">
                 <div>
-                  <div class="work-card-stat">635</div>
-                  <div class="work-card-stat-lbl">ICP-verified MQLs · one wave</div>
+                  <div class="work-card-stat">127%</div>
+                  <div class="work-card-stat-lbl">Qualified-lead goal attainment</div>
                 </div>
                 <div class="work-card-arrow">→</div>
               </div>
@@ -2809,8 +2848,8 @@ function workIndexPage() {
                 <span class="sep">·</span>
                 <span class="label">ASUS × Gartner · 2022</span>
               </div>
-              <h3>A 4-wave analyst-content demand engine across 27 countries.</h3>
-              <p class="work-card-desc">Quarterly Gartner report waves · 19 localized landing pages · syndication + SEM + programmatic · Pardot → Salesforce qualification funnel.</p>
+              <h3>From Gartner research to qualified enterprise demand.</h3>
+              <p class="work-card-desc">Buyer-specific messaging · global distribution · paid media and content syndication · qualified Sales handoff.</p>
               <div class="work-card-tags">
                 <span>Demand gen</span>
                 <span>Content syndication</span>
@@ -2820,8 +2859,8 @@ function workIndexPage() {
             </div>
             <div class="work-card-foot">
               <div>
-                <div class="work-card-stat">20.5M</div>
-                <div class="work-card-stat-lbl">Impressions · flagship wave</div>
+                <div class="work-card-stat">127%</div>
+                <div class="work-card-stat-lbl">Qualified-lead target achieved</div>
               </div>
               <div class="work-card-arrow">→</div>
             </div>
@@ -2860,166 +2899,105 @@ function demandGenPage() {
   return `
     <div class="page">
       <div class="container">
-
-        <!-- Hero -->
         <div class="case-hero reveal">
           <div class="case-breadcrumb">
-            <a href="#/work">Work</a>
-            <span class="arrow">→</span>
-            <span class="current">ASUS × Gartner · Demand gen</span>
+            <a href="#/work">Work</a><span class="arrow">→</span>
+            <span class="current">ASUS × Gartner · Demand generation</span>
           </div>
-          <div class="label label-mint" style="margin-bottom:16px;">Case study · Demand generation</div>
-          <h1 class="display-l">One analyst report. Four waves. <span class="italic">A demand engine.</span></h1>
-          <p class="body-l" style="margin-top:24px; max-width:760px;">Built and ran ASUS Business's annual Gartner-licensed content program: four themed report waves, each localized, syndicated, amplified, and qualified through a Pardot-to-Salesforce funnel — from HQ, across 27 countries.</p>
-
+          <div class="label label-mint" style="margin-bottom:16px;">Selected work · B2B product marketing</div>
+          <h1 class="display-l">From industry research to <span class="italic">qualified demand.</span></h1>
+          <p class="body-l" style="margin-top:22px;max-width:800px;">At ASUS Business, I turned Gartner insights into buyer-focused messaging, localized campaigns, and a measurable enterprise lead-generation program.</p>
           <div class="case-meta">
-            <div class="m"><span class="lbl">Role</span><span class="v">HQ B2B PMM · program owner</span></div>
-            <div class="m"><span class="lbl">Cadence</span><span class="v">4 waves · full year</span></div>
-            <div class="m"><span class="lbl">Markets</span><span class="v">27 countries</span></div>
-            <div class="m"><span class="lbl">Landing pages</span><span class="v">19 localized</span></div>
-            <div class="m"><span class="lbl">Flagship wave</span><span class="v">20.5M impressions</span></div>
+            <div class="m"><span class="lbl">Role</span><span class="v">Global B2B Product Marketing</span></div>
+            <div class="m"><span class="lbl">Focus</span><span class="v">Positioning · Demand gen</span></div>
+            <div class="m"><span class="lbl">Channels</span><span class="v">Landing pages · Paid · Syndication</span></div>
           </div>
         </div>
 
-        <!-- The work itself · live landing pages -->
-        <section class="case-section reveal">
-          <div class="summit-showcase">
-            <img src="https://www.asus.com/event/2022-ASUS-analyst-reports/gartner-emerging-technologies-for-digital-workplace-2022/assets/images/kv.jpg" alt="The Future of Work is Here — ASUS x Gartner gated landing page key visual" loading="lazy" />
-            <div class="deck-caption">"The Future of Work is Here" — the gated report landing page, still live on asus.com</div>
-          </div>
-          <div class="cta-row" style="margin-top:20px;">
-            <a href="https://www.asus.com/event/2022-ASUS-analyst-reports/gartner-emerging-technologies-for-digital-workplace-2022/" target="_blank" rel="noopener" class="btn btn-ghost">Hybrid work landing page <span class="arrow">↗</span></a>
-            <a href="https://www.asus.com/eg/event/2022-ASUS-analyst-reports/Emerging-Technologies-and-Trends-in-Environmental-Sustainability/" target="_blank" rel="noopener" class="btn btn-ghost">Sustainability landing page <span class="arrow">↗</span></a>
-          </div>
-        </section>
-
-        <!-- Architecture -->
         <section class="case-section reveal">
           <div class="section-header">
-            <div class="label label-violet">01 — Program architecture</div>
-            <h2 class="display-m" style="margin-top:8px;">Four themed waves, one repeatable system.</h2>
-            <p class="body-l" style="margin-top:16px;">Each quarter licensed a Gartner report on a theme the ICP was already researching — education for CIOs, hybrid-workplace tech, digital worker preferences, sustainability — then ran the same machine: HQ localizes assets, countries launch gated landing pages, owned + paid + syndication drive traffic, Pardot scores, Salesforce qualifies.</p>
+            <div class="label label-violet">01 — Messaging strategy</div>
+            <h2 class="display-m" style="margin-top:8px;">One research program. Three buyer priorities.</h2>
+            <p class="body-l" style="margin-top:15px;">My decision: lead with enterprise IT and procurement needs, then connect Gartner research to ASUS Business solutions.</p>
           </div>
-
-          <div class="framework reveal">
-            <div class="fw-step">
-              <div class="fw-num">01</div>
-              <div class="fw-stage">Asset</div>
-              <h4>License &amp; localize</h4>
-              <p>Quarterly Gartner report matched to ICP research themes; HQ web copy and HTML packaged for country teams.</p>
-              <div class="fw-example">19 localized gated landing pages</div>
-              <div class="fw-arrow">→</div>
-            </div>
-            <div class="fw-step">
-              <div class="fw-num">02</div>
-              <div class="fw-stage">Distribution</div>
-              <h4>Owned + paid + syndication</h4>
-              <p>EDM, organic social, and site banners; SEM, programmatic display, GDN, and paid social; two B2B database syndication partners.</p>
-              <div class="fw-example">Channel mix tuned per wave</div>
-              <div class="fw-arrow">→</div>
-            </div>
-            <div class="fw-step">
-              <div class="fw-num">03</div>
-              <div class="fw-stage">Qualification</div>
-              <h4>Pardot → Salesforce</h4>
-              <p>Form submissions scored and ICP-verified in Pardot, routed to Salesforce, with a BANT survey separating sales-ready buyers.</p>
-              <div class="fw-example">Form → MQL → BANT</div>
-              <div class="fw-arrow">→</div>
-            </div>
-            <div class="fw-step">
-              <div class="fw-num">04</div>
-              <div class="fw-stage">Iteration</div>
-              <h4>Learn wave over wave</h4>
-              <p>Wave 1 ran organic-only pages; every later wave shipped with paid amplification and ASUS-solution content built into the page.</p>
-              <div class="fw-example">Wave 4: 27 countries, 16 weeks</div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Flagship wave -->
-        <section class="case-section reveal">
-          <div class="section-header">
-            <div class="label label-violet">02 — Flagship wave</div>
-            <h2 class="display-m" style="margin-top:8px;">The Q3 wave, top to bottom of funnel.</h2>
-            <p class="body-l" style="margin-top:16px;">"5 Global Digital Worker Preferences That Drive Hybrid Work Equity" — the hybrid-work theme, three months, every channel on.</p>
-          </div>
-
-          <div class="stats-grid reveal-stagger" style="margin-top:32px;">
-            <div class="stat">
-              <div class="stat-num">20.5M</div>
-              <div class="stat-label">Impressions</div>
-              <div class="stat-sub">media buy + social + syndication</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">28.6K</div>
-              <div class="stat-label">Landing page sessions</div>
-              <div class="stat-sub">across 19 localized pages</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">987</div>
-              <div class="stat-label">Form submissions</div>
-              <div class="stat-sub">gated report downloads</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">635</div>
-              <div class="stat-label">ICP-verified MQLs</div>
-              <div class="stat-sub">scored in Pardot → Salesforce</div>
-            </div>
-          </div>
-
-          <div class="ai-strip reveal" style="margin-top:32px;">
-            <strong>Bottom of funnel</strong>
-            <span class="item">BANT survey separated sales-ready enterprise buyers for direct sales follow-up</span>
-            <span class="item">64% form-to-MQL verification rate</span>
-          </div>
-        </section>
-
-        <!-- Judgment -->
-        <section class="case-section reveal">
-          <div class="section-header">
-            <div class="label label-violet">03 — Channel judgment</div>
-            <h2 class="display-m" style="margin-top:8px;">Evaluated on ICP fit, not cost per lead.</h2>
-          </div>
-
-          <div class="brand-pillars reveal-stagger" style="margin-top:32px;">
-            <div class="bp-card" style="border-left: 3px solid var(--violet);">
-              <div class="diff-num" style="margin-bottom: 8px;">Mix</div>
-              <h4>Syndication vs. paid vs. owned</h4>
-              <p>Database syndication delivered volume; SEM delivered intent; EDM and social kept cost near zero. Each wave rebalanced the mix by what qualified downstream — not by raw lead price.</p>
-            </div>
-            <div class="bp-card" style="border-left: 3px solid var(--violet);">
-              <div class="diff-num" style="margin-bottom: 8px;">Depth</div>
-              <h4>Benchmark every channel</h4>
-              <p>CToR, CTR, and cost-per-prospect tracked against industry benchmarks per market — surfacing calls like a market with the cheapest clicks producing few qualified prospects.</p>
-            </div>
-            <div class="bp-card" style="border-left: 3px solid var(--violet);">
-              <div class="diff-num" style="margin-bottom: 8px;">Loop</div>
-              <h4>Insight back into messaging</h4>
-              <p>Post-exposure intent analysis showed security as the most-researched theme — fed into the next wave's page content and the following quarter's briefs.</p>
-            </div>
-          </div>
-
-          <p class="body-s" style="margin-top:24px; color:var(--ink-mute);">Program detail continues in the <a href="#/work/asus">ASUS Business case study</a> — positioning, content engine, and the co-branded analyst work this program was built on.</p>
-        </section>
-
-        <!-- Next case -->
-        <section class="case-section reveal" style="margin-top:120px;">
-          <a href="#/work/asus" class="work-card asus">
-            <div class="work-card-bg"></div>
-            <div>
-              <div class="work-card-meta">
-                <span class="label label-violet">Next case study →</span>
+          <div class="dg-cards reveal-stagger">
+            <a class="dg-card" href="https://www.asus.com/event/2022-ASUS-analyst-reports/gartner-emerging-technologies-for-digital-workplace-2022/" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.asus.com/event/2022-ASUS-analyst-reports/gartner-emerging-technologies-for-digital-workplace-2022/assets/images/hybird_workplace.jpg" alt="Official ASUS hybrid workplace campaign visual" loading="lazy">
+              <div class="dg-card-body">
+                <span class="dg-card-kicker">2022 · Hybrid workplace</span>
+                <h3>Productivity &amp; manageability</h3>
+                <p>Connected workplace change to practical business-device needs.</p>
+                <span class="dg-card-cta">View ASUS page ↗</span>
               </div>
-              <h3>Repositioning a hardware brand against Dell, HP, and Lenovo.</h3>
-            </div>
-            <div class="work-card-foot">
-              <div>
-                <div class="work-card-stat">14</div>
-                <div class="work-card-stat-lbl">Markets</div>
+            </a>
+            <a class="dg-card" href="https://www.connect.asus.com/modern-cybersecurity-endpoint-protection-strategies" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.connect.asus.com/l/922413/2023-09-25/22j68t/922413/1695699461BNG18Sei/Landing_Page_2880x1020.jpg" alt="Related ASUS 2023 endpoint security campaign visual" loading="lazy">
+              <div class="dg-card-body">
+                <span class="dg-card-kicker">2023 · Related example</span>
+                <h3>Endpoint security &amp; risk</h3>
+                <p>Shows the later security-focused messaging direction.</p>
+                <span class="dg-card-cta">View related ASUS page ↗</span>
               </div>
-              <div class="work-card-arrow">→</div>
+            </a>
+            <a class="dg-card" href="https://www.asus.com/me-en/event/2022-ASUS-analyst-reports/Emerging-Technologies-and-Trends-in-Environmental-Sustainability/" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.asus.com/me-en/event/2022-ASUS-analyst-reports/Emerging-Technologies-and-Trends-in-Environmental-Sustainability/v1/features/images/og/img.jpg" alt="Official ASUS Gartner ESG sustainability campaign visual" loading="lazy">
+              <div class="dg-card-body">
+                <span class="dg-card-kicker">2022 · ESG</span>
+                <h3>Sustainable procurement</h3>
+                <p>Linked lifecycle and energy efficiency to purchasing decisions.</p>
+                <span class="dg-card-cta">View ASUS page ↗</span>
+              </div>
+            </a>
+          </div>
+          <p class="dg-note">Public ASUS visuals. The 2023 cybersecurity page was published after my ASUS tenure and is a related example, not claimed as direct work. ESG messaging extended into a later handoff.</p>
+        </section>
+
+        <section class="case-section reveal">
+          <div class="section-header">
+            <div class="label label-violet">02 — My execution</div>
+            <h2 class="display-m" style="margin-top:8px;">Position. Distribute. Qualify.</h2>
+          </div>
+          <div class="dg-steps reveal-stagger">
+            <div class="dg-step"><div class="dg-step-num">01 / POSITION</div><h3>Match the message</h3><p>Translate analyst insights into buyer-specific value and ASUS solution relevance.</p></div>
+            <div class="dg-step"><div class="dg-step-num">02 / DISTRIBUTE</div><h3>Reach IT buyers</h3><p>Coordinate regional landing pages, paid media, and content syndication.</p></div>
+            <div class="dg-step"><div class="dg-step-num">03 / QUALIFY</div><h3>Improve lead quality</h3><p>Review funnel performance and align nurture and Sales handoff.</p></div>
+          </div>
+          <p class="dg-note">I owned campaign strategy, messaging, channel plans, and regional briefs. I partnered with Marketing Operations on Pardot/Salesforce workflows and Sales on qualification.</p>
+        </section>
+
+        <section class="case-section reveal" style="margin-bottom:64px;">
+          <div class="section-header">
+            <div class="label label-violet">03 — Outcomes</div>
+            <h2 class="display-m" style="margin-top:8px;">Optimized for qualified demand.</h2>
+            <p class="body-l" style="margin-top:15px;">Campaign figures are normalized to protect internal reporting.</p>
+          </div>
+          <div class="dg-results">
+            <div class="dg-funnel">
+              <div class="dg-funnel-head"><strong>Selected wave · Funnel</strong><span class="dg-pill">Ratio only</span></div>
+              <div class="dg-funnel-row">
+                <div class="dg-funnel-label"><span>Report submissions</span><strong>100%</strong></div>
+                <div class="dg-track"><div class="dg-fill" style="width:100%"></div></div>
+              </div>
+              <div class="dg-funnel-row">
+                <div class="dg-funnel-label"><span>Qualified / warm leads</span><strong>64%</strong></div>
+                <div class="dg-track"><div class="dg-fill qual"></div></div>
+              </div>
+              <div class="dg-handoff">Sales handoff → Higher-intent leads prioritized for follow-up.</div>
             </div>
-          </a>
+            <div class="dg-kpis">
+              <div class="dg-kpi"><div class="dg-kpi-number">127%</div><div class="dg-kpi-label">Qualified-lead goal attainment</div></div>
+              <div class="dg-kpi"><div class="dg-kpi-number">7.4×</div><div class="dg-kpi-label">Response volume vs. first wave</div></div>
+            </div>
+          </div>
+          <p class="dg-note">Results reflect combined improvements in targeting, paid distribution, syndication, and localization. Marketing-qualified leads are not closed deals. Absolute volumes and commercial figures are withheld.</p>
+        </section>
+
+        <section class="case-section reveal" style="margin-bottom:55px;">
+          <p class="body-l"><strong>Takeaway:</strong> Gartner research created trust. Buyer relevance and qualification turned interest into a more actionable pipeline.</p>
+          <div class="cta-row" style="margin-top:23px;">
+            <a href="#/work" class="btn btn-ghost">← All work</a>
+            <a href="#/work/asus" class="btn btn-primary">ASUS Business case study <span class="arrow">→</span></a>
+          </div>
         </section>
       </div>
     </div>
