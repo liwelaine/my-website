@@ -81,6 +81,30 @@
     .case-fact + .case-fact { border-left: 1px solid var(--line); padding-left: 30px; }
     .case-fact small { display: block; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-size: 11px; font-weight: 800; margin-bottom: 8px; }
     .case-fact strong { display: block; font-size: clamp(17px, 2vw, 24px); line-height: 1.3; letter-spacing: -.02em; }
+    .product-showcase { padding-top: 68px; }
+    .product-intro { max-width: 860px; }
+    .product-intro h2, .feature-heading h2 { font-size: clamp(30px, 3.4vw, 43px); margin: 11px 0 20px; }
+    .product-intro p { font-size: 19px; line-height: 1.72; color: #4d5c5e; }
+    .product-intro .example { font-size: 16px; color: #617071; margin-top: 18px; }
+    .product-video { margin: 39px 0 0; max-width: 1000px; }
+    .video-frame { background: #142023; border: 1px solid #d0dad8; border-radius: 6px; overflow: hidden; aspect-ratio: 16/9; }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .product-video figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 13px; color: #647375; font-size: 13px; }
+    .product-video figcaption a { color: var(--accent); font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+    .feature-section { margin-top: 78px; padding: 54px 0 62px; border-block: 1px solid var(--line); }
+    .feature-heading { max-width: 770px; }
+    .feature-heading p { color: #57676a; font-size: 17px; margin-bottom: 28px; }
+    .feature-map { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
+    .feature-stage { position: relative; padding: 24px 22px 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; min-height: 333px; }
+    .feature-stage:not(:last-child)::after { content: '→'; position: absolute; right: -18px; top: 53px; z-index: 1; color: var(--accent); background: var(--bg); font-size: 23px; line-height: 1; padding: 0 3px; }
+    .feature-stage .step { color: var(--accent); font-size: 11px; letter-spacing: .13em; font-weight: 850; }
+    .feature-stage h3 { font-size: 25px; margin: 12px 0 5px; }
+    .feature-stage .value { font-size: 13px; color: #587074; font-weight: 650; min-height: 38px; }
+    .feature-stage ul { list-style: none; margin: 15px 0 0; padding: 0; border-top: 1px solid var(--line); }
+    .feature-stage li { padding: 11px 0; font-size: 13px; line-height: 1.44; color: #59696a; }
+    .feature-stage li + li { border-top: 1px solid #edf0ef; }
+    .feature-stage li strong { display: block; color: #263436; font-size: 14px; line-height: 1.35; margin-bottom: 3px; }
+    .feature-caption { margin: 17px 0 0; font-size: 13px; color: #697779; }
     .story { display: grid; grid-template-columns: 240px minmax(0, 720px); gap: 55px; padding-top: 64px; }
     .story-label { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; padding-top: 7px; }
     .story h2 { font-size: clamp(26px, 3vw, 36px); margin: 0 0 19px; }
@@ -118,6 +142,10 @@
       .case-fact + .case-fact { border-top: 1px solid var(--line); }
       .case-hero h1 { font-size: clamp(38px, 8vw, 55px); }
       .takeaway { padding: 28px; }
+      .feature-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .feature-stage { min-height: 0; }
+      .feature-stage::after { display: none; }
+      .product-showcase { padding-top: 54px; }
     }
     @media (max-width: 470px) {
       .wordmark { font-size: 17px; }
@@ -126,6 +154,9 @@
       .work-card { padding: 26px; }
       .footer-inner { flex-direction: column; gap: 8px; }
       .case-end { flex-direction: column; align-items: start; }
+      .feature-map { grid-template-columns: 1fr; }
+      .product-intro p { font-size: 17px; }
+      .feature-section { margin-top: 56px; padding: 43px 0; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .work-card { transition: none; } .work-card:hover { transform: none; } }
   </style>
@@ -156,13 +187,13 @@
         cardTitle: 'HelperAI',
         description: 'Taking a developer AI-agent platform to market—from customer research and positioning to an organic product launch.',
         result: '12,400 waitlist sign-ups in ~3 weeks',
-        title: 'Making AI agents easier to build—and easier to bring to market.',
-        lede: 'HelperAI was an AI-agent platform for developers, combining integrations, authorization, memory, versioning, and deployment so teams could build and operate action-taking agents without creating all the infrastructure themselves.',
+        title: 'HelperAI: From prototype to production.',
+        lede: 'An early AI agent development and deployment platform from YC-backed Chainsight. As the founding PMM, I helped turn its technical capabilities into a product story, launch strategy, and practical use cases.',
         facts: [['Role', 'Founding Product Marketing Manager'], ['Research', '86 customer interviews'], ['Launch', '12,400 waitlist sign-ups']],
         sections: [
           { label: 'The challenge', title: 'A technical product in a noisy AI market', body: `<p>At an early-stage, YC-backed startup, I was the only marketer on a six-person team. The platform offered capabilities beyond a simple chatbot, but the initial promise of “Let AI Work for You” was too broad to show customers where to begin.</p><p>The marketing challenge was to make the product understandable and identify use cases with a credible reason to adopt.</p>` },
           { label: 'Customer research', title: 'From scattered use cases to a clearer market signal', body: `<p>I gathered input through <strong>86 interviews</strong>, approximately <strong>150 survey responses</strong>, and prototype feedback. Research covered developers, business operators, and teams exploring AI-powered workflows.</p><p>One recurring pain point was moving from an interesting AI demo to a workflow that could access real business tools and take action. Sales prospecting became a more concrete use case to explore than general-purpose automation.</p>` },
-          { label: 'Product story', title: 'Translate infrastructure into customer value', body: `<p>HelperAI combined capabilities that developers otherwise had to assemble separately:</p><ul><li><strong>Build faster:</strong> reusable API tools and knowledge sources to connect an agent to real workflows.</li><li><strong>Reduce development overhead:</strong> OAuth2 user authorization and token handling.</li><li><strong>Release with more control:</strong> agent and tool versions, environments, and deployment management.</li></ul><p>For example, a support agent could retrieve customer details and create a ticket—with the required API access and authorization handled through the platform.</p>` },
+          { label: 'Positioning & messaging', title: 'Turn features into reasons to adopt', body: `<p>I worked with the founder and engineers on demos, educational content, and customer-facing messaging that showed what an agent could actually do—not only that it could answer questions.</p><p>The product's capabilities translated into three clear benefits: <strong>build faster</strong> by reusing tools and integrations, <strong>reduce infrastructure work</strong> with authorization and runtime support, and <strong>release with more control</strong> through versioning and environments.</p><p>For a developer, the story centered on integration and maintenance effort. For a technical founder, it centered on shipping useful AI features sooner.</p>` },
           { label: 'Launch & outcome', title: 'Organic interest, then product learning', body: `<p>I developed GTM messaging and launch materials, supported product demos, and coordinated community-led distribution, including Product Hunt and developer/AI communities. The launch did not rely on paid advertising.</p><p>The beta generated <strong>12,400 waitlist sign-ups in roughly three weeks</strong> and reached <strong>#23 on Product Hunt</strong>. I also used session recordings and PostHog feedback to understand first-agent setup friction. Sign-ups demonstrated launch interest; deeper activation and product reliability remained important next challenges.</p>` }
         ],
         takeaway: 'The strongest narrative was not “another AI chatbot.” It was the supporting infrastructure that helps developers turn an agent prototype into a useful, deployable workflow.',
@@ -254,12 +285,53 @@
         </section>`;
     }
 
+    function helperAIProductShowcase() {
+      return `
+        <section class="product-showcase" aria-labelledby="product-overview">
+          <div class="product-intro">
+            <div class="eyebrow">01 / Product overview</div>
+            <h2 id="product-overview">What is HelperAI?</h2>
+            <p><strong>HelperAI was an AI agent development and deployment platform designed for developers.</strong> It helped teams move AI agents from prototype to production by bringing together the infrastructure needed to build, connect, run, and manage them.</p>
+            <p class="example"><strong>For example:</strong> a sales agent might look up account information, retrieve relevant context, and create a follow-up task. Beyond the AI model, that workflow needs API connections, user authorization, memory, and reliable deployment—capabilities HelperAI brought into one platform.</p>
+          </div>
+          <figure class="product-video">
+            <div class="video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/hHG4B-13010?start=2&amp;rel=0" title="HelperAI product walkthrough video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <figcaption><span>Product walkthrough · HelperAI demo</span><a href="https://www.youtube.com/watch?v=hHG4B-13010&amp;t=2s" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a></figcaption>
+          </figure>
+        </section>
+        <section class="feature-section" aria-labelledby="features-heading">
+          <div class="feature-heading"><div class="eyebrow">02 / Platform capability map</div><h2 id="features-heading">From prototype to production.</h2><p>Four groups of capabilities supported the agent lifecycle. Each group solves a different piece of the development and operational work.</p></div>
+          <div class="feature-map" role="group" aria-label="HelperAI capabilities grouped into Build, Connect, Run, and Manage">
+            <div class="feature-stage">
+              <div class="step">01 / CREATE</div><h3>Build</h3><div class="value">Create an agent and give it knowledge</div>
+              <ul><li><strong>Agent Construction</strong>Configure agent behavior and tasks</li><li><strong>Knowledge Base / Q&amp;A</strong>Use reference information to answer questions</li></ul>
+            </div>
+            <div class="feature-stage">
+              <div class="step">02 / INTEGRATE</div><h3>Connect</h3><div class="value">Make the agent useful in real systems</div>
+              <ul><li><strong>API Tools</strong>Call external services and take actions</li><li><strong>OAuth2 Authorization</strong>Manage user-approved access and tokens</li><li><strong>Bot Integrations</strong>Connect via Slack, Telegram, or webhooks</li></ul>
+            </div>
+            <div class="feature-stage">
+              <div class="step">03 / EXECUTE</div><h3>Run</h3><div class="value">Carry out tasks with relevant context</div>
+              <ul><li><strong>Memory</strong>Retain context across interactions</li><li><strong>Event-Driven Tasks</strong>Trigger work from events or subscriptions</li><li><strong>Runtime Management</strong>Operate agent execution</li></ul>
+            </div>
+            <div class="feature-stage">
+              <div class="step">04 / OPERATE</div><h3>Manage</h3><div class="value">Control releases and ongoing changes</div>
+              <ul><li><strong>Agent &amp; Tool Versioning</strong>Track and control updates separately</li><li><strong>Environments</strong>Use different development and production settings</li><li><strong>Deployment</strong>Launch and maintain agents</li></ul>
+            </div>
+          </div>
+          <p class="feature-caption">Conceptual feature map based on HelperAI's product capabilities—not a literal diagram of its internal system architecture.</p>
+        </section>`;
+    }
+
     function casePage(p) {
       const idx = projects.findIndex(x => x.id === p.id);
       const next = projects[(idx + 1) % projects.length];
       return `<article class="wrap case-page">
         <a class="back-link" href="#/work">← All projects</a>
         <header class="case-hero"><div class="eyebrow">${p.number} / 04 · ${p.category}</div><h1>${p.title}</h1><p class="case-lede">${p.lede}</p></header>
+        ${p.id === 'helperai' ? helperAIProductShowcase() : ''}
         <div class="case-facts">${p.facts.map(f => `<div class="case-fact"><small>${f[0]}</small><strong>${f[1]}</strong></div>`).join('')}</div>
         ${p.sections.map((s, i) => `<section class="story" aria-labelledby="story-${i}"><div class="story-label">${String(i + 1).padStart(2, '0')} / ${s.label}</div><div><h2 id="story-${i}">${s.title}</h2>${s.body}</div></section>${i < p.sections.length - 1 ? '<div class="story-divider"></div>' : ''}`).join('')}
         <div class="takeaway"><div class="eyebrow">Key takeaway</div><p>${p.takeaway}</p></div>
