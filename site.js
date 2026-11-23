@@ -6,6 +6,14 @@
     webinar: 'case-webinar.html',
     content: 'case-content-strategy.html'
   };
+  const legacyTitles = {
+    '': 'Selected Work — Elaine Lee',
+    about: 'About Elaine Lee — Product Marketing',
+    helperai: 'HelperAI: From Prototype to Production — Elaine Lee',
+    gartner: 'ASUS × Gartner Demand Generation — Elaine Lee',
+    webinar: 'Global Education Webinar — Elaine Lee',
+    content: 'ASUS Business Content Strategy — Elaine Lee'
+  };
   const independentProject = {
     id: 'ai-pipeline',
     number: '05',
@@ -117,9 +125,19 @@
     const legacy = (location.hash || '').replace(/^#\/?/, '');
     const aliases = { work: '', 'work/chainsight': 'helperai', 'work/helperai': 'helperai', 'work/demand-gen': 'gartner', 'work/gartner': 'gartner', 'work/webinar': 'webinar', 'work/asus': 'content', 'work/content-strategy': 'content', 'ai-workflow': 'content' };
     const legacyId = aliases[legacy] ?? legacy;
-    if (legacy && legacyId === '') app.innerHTML = workPage();
-    else if (legacy && legacyId === 'about') app.innerHTML = aboutPage();
-    else if (legacy && projects.some(item => item.id === legacyId)) app.innerHTML = casePage(projects.find(item => item.id === legacyId));
+    if (legacy && legacyId === '') {
+      app.innerHTML = workPage();
+      document.title = legacyTitles[legacyId];
+    } else if (legacy && legacyId === 'about') {
+      app.innerHTML = aboutPage();
+      document.title = legacyTitles[legacyId];
+    } else if (legacy) {
+      const project = projects.find(item => item.id === legacyId);
+      if (project) {
+        app.innerHTML = casePage(project);
+        document.title = legacyTitles[legacyId];
+      }
+    }
   }
 
   render();
